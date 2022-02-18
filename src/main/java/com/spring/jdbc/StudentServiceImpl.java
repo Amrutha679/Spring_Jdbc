@@ -29,7 +29,7 @@ public class StudentServiceImpl implements StudentService {
 		
 		return this.studentDao.list();
 	}
-
+	
 	@Transactional
 	public void update(Student student) {
 		this.studentDao.update(student);

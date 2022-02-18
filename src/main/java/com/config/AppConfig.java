@@ -30,13 +30,12 @@ public class AppConfig {
 
     @Bean
     public DataSource getDataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName(env.getProperty("db.driver"));
-        dataSource.setUrl(env.getProperty("db.url"));
-        
-        dataSource.setUsername(env.getProperty("db.username"));
-        dataSource.setPassword(env.getProperty("db.password"));
-        return dataSource;
+    	 BasicDataSource ds = new BasicDataSource();
+         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+         ds.setUrl("jdbc:mysql://localhost:3306/mondee");
+         ds.setUsername("Amrutha");
+         ds.setPassword("Amrutha@890");
+         return ds;
     }
 
     @Bean
